@@ -5,7 +5,7 @@
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/YOUR_GITHUB_USER_NAME/openbaas",
+  "repository": "https://github.com/Hongqin-Li/openbaas",
   "license": "MIT",
   "keywords": [],
   "scripts": {
