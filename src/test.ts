@@ -13,19 +13,16 @@ export function pretest() {
     const port = 1338;
     const serverUrl = `http://localhost:${port}/parse`;
 
-    await server
-      .start({
-        databaseUri,
-        appId,
-        masterKey,
-        port,
-        serverUrl,
-      })
-      .then(() => {
-        Parse.initialize(appId, '', masterKey);
-        // eslint-disable-next-line functional/immutable-data
-        Parse.serverURL = serverUrl;
-      });
+    await server.start({
+      databaseUri,
+      appId,
+      masterKey,
+      port,
+      serverUrl,
+    });
+    Parse.initialize(appId, '', masterKey);
+    // eslint-disable-next-line functional/immutable-data
+    Parse.serverURL = serverUrl;
   });
 
   test.after.always('cleanup', (t) => {

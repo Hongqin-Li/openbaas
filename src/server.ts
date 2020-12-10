@@ -49,11 +49,10 @@ function start(opt: ServerOption) {
     const httpServer = createServer(app);
     httpServer.listen(opt.port, function () {
       console.log(`parse-server-example running on port ${opt.port}.`);
+      // This will enable the Live Query real-time server
+      ParseServer.createLiveQueryServer(httpServer);
       resolve(httpServer);
     });
-
-    // This will enable the Live Query real-time server
-    ParseServer.createLiveQueryServer(httpServer);
   });
 }
 
