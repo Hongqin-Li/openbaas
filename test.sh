@@ -13,10 +13,10 @@ cmd=$1
 if [ "$1" = "GET" ]; then
   curl -X GET -H "X-Parse-Application-Id: myAppId" \
     http://localhost:1337/parse/$2
+else
+  curl -v -X POST \
+    -H "X-Parse-Application-Id: myAppId" \
+    --form file="@test.sh" \
+    http://localhost:1337/parse/files/hello.txt
 fi
-
-# curl -X POST \
-#   -H "X-Parse-Application-Id: myAppId" \
-#   --form file="@test.sh" \
-#   http://localhost:1337/parse/files/hello.txt
 

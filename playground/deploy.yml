@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ob-test
+  labels:
+    app: ob
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ob
+  template:
+    metadata:
+      labels:
+        app: ob
+    spec:
+      containers:
+      - name: ob
+        image: ob-test
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
