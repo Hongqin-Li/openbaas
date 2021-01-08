@@ -1,3 +1,5 @@
+import * as Parse from 'parse/node';
+
 import server from './server';
 
 // cspell:disable-next
@@ -10,7 +12,7 @@ const port = 1337;
 server.start({
   databaseUri: `mongodb://${mongo_user}:${mongo_pwd}@localhost:27017/${mongo_db}`,
   port,
-  masterKey: process.env.MASTER_KEY || '',
+  masterKey: process.env.MASTER_KEY || 'xxx',
   appId: 'myAppId',
   serverUrl: `http://localhost:${port}/parse`,
 });
