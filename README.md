@@ -3,6 +3,9 @@
 [![CI Status](../../workflows/CI/badge.svg)](../../actions)
 [![Deploy Status](../../workflows/Deploy/badge.svg)](../../actions)
 
+
+> Now moves to [rhymer](https://github.com/Hongqin-Li/rhymer/blob/master/examples/openbaas.rs) as an example, using BaaS library in Rust instead of Parse Server.
+
 Open-source Backend as a Service.
 
 ## Development workflow
